@@ -1,11 +1,11 @@
-"""MakeFun entry: Slept Great, Says the Bank"""
+"""MakeFun competition entry: Slept Great, Says the Bank"""
 import os
 
-# Judge brief: sleep-app claim of great rest vs bank's rent charge — one of them is lying
-LINE = "My sleep app says I slept great. My bank says otherwise. One of them's lying. Charging rent."
+OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-os.makedirs(output_dir, exist_ok=True)
+ENTRY_FILE = os.path.join(OUTPUT_DIR, "entry.txt")
 
-with open(os.path.join(output_dir, "entry.txt"), "w") as f:
-    f.write(LINE)
+line = "My sleep app says I slept great. My bank says otherwise. One of them is lying, and it's the one that charges rent."
+with open(ENTRY_FILE, "w") as f:
+    f.write(line)
