@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MakeFun competition entry: Slept Great, Says the Bank"""
+"""MakeFun: Slept Great, Says the Bank"""
 import os
 
 OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
